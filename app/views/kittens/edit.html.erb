@@ -1,2 +1,6 @@
 <h1>Kittens#edit</h1>
 <p>Find me in app/views/kittens/edit.html.erb</p>
+
+<%= render "form" %>
+
+<%= button_to "Destroy Kitten", kitten_path(@kitten), method: :delete %>
