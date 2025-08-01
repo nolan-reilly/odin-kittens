@@ -1,9 +1,17 @@
 <h1>Kittens#index</h1>
 <p>Find me in app/views/kittens/index.html.erb</p>
 
+<% flash.each do |type, msg| %>
+    <div>
+        <%= msg %>
+    </div>
+<% end %>
+
 <% @kittens.each do |kitten| %>
     <div>
-        <h2>Name: <%= kitten.name %></h2>
+        <%= link_to kitten_path(kitten) do %>
+            <h2><%= kitten.name %></h2>
+        <% end %>
         <p>Age: <%= kitten.age %></p>
         <p>Cuteness: <%= kitten.cuteness %></p>
         <p>Softness: <%= kitten.softness %></p>

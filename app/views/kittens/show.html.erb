@@ -1,6 +1,12 @@
 <h1>Kittens#show</h1>
 <p>Find me in app/views/kittens/show.html.erb</p>
 
+<% flash.each do |type, msg| %>
+    <div>
+        <%= msg %>
+    </div>
+<% end %>
+
 <h1><%= @kitten.name %></h1>
 <p>Age: <%= @kitten.age %></p>
 <p>Cuteness: <%= @kitten.cuteness %></p>
